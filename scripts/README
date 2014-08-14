@@ -1,0 +1,62 @@
+
+	MOTORWAY PZ ALTITUDE CHECK
+
+Scripts to check altitude crossing across a line defined by a pair of easting/northing coordinates
+
+NB Due to scripts relying on *nix filepaths, the scripts do not work on windows systems.
+
+
+1. Unpack balloon.tgz
+
+2. Edit \\balloon\scripts\parse.pl editing line:
+
+	use lib '/home6/mailinfo/scripts/balloon/lib';
+
+to reflect the correct path for the unpacked balloon folder 
+
+3. Create sub-directory in data directory in the flight format DDMM(a|p) e.g. 2507p  
+
+4. Upload all .txt track files for the given flight e.g. 2507p004.txt etc. to folder created in step 3.
+
+5. Edit \scripts\main.sh modifying line
+
+	myfolder=2507p
+
+with correct flight format.
+
+6. Load all .plt files to Ozi Explorer.
+
+7. Set two trackpoints on the motorway, on each side of the .plt tracks, these will represent the motorway in the scripts.
+
+8. Edit \config\config with eastings and northings obtained in step 7, lowest easting being the first pair.
+
+8.1 Edit \config\config with the minimum altitude allowed for the motorway pz crossing e.g. 
+
+	MIN_ALT=2500
+
+9. Run the main.sh script e.g. 
+
+me@mydomain.com [~/balloon/scripts]# . main.sh
+
+10. Report will show up in the report sub-directory, in the format, MMDD(a|p).report e.g. 2507p.report, each line containing the
+pilot number, easting and northing of motorway crossing, altitude at that coordinate as well as a star if the altitude is below
+minimum altitude set in \config\config e.g.
+
+000     NO CROSSING FOUND
+001     240190  7513793 887.0(m)        2909.36(ft)
+002     240201  7513789 865.0(m)        2837.2(ft)
+003     240121  7513810 875.0(m)        2870(ft)
+004     240189  7513793 798.0(m)        2617.44(ft)
+005     240091  7513816 907.0(m)        2974.96(ft)
+006     240195  7513787 852.0(m)        2794.56(ft)
+007     240088  7513816 900.0(m)        2952(ft)
+008     240085  7513811 840.0(m)        2755.2(ft)
+009     240204  7513785 876.0(m)        2873.28(ft)
+
+
+	##################################
+	# dsikar@gmail.com		 #
+	#				 #
+	# Worlds 2014, Rio Claro, Brazil #
+	##################################
+

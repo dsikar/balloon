@@ -1,0 +1,28 @@
+# Baloon altitude PZ crossing config file
+
+# Array size of parse comma separated line NB index 0.
+
+ARRAYSIZE=13
+
+# Array indexes, easting, northing and altitude
+
+EI=3
+NI=4
+AI=8
+
+# Eastings and northings for user defined line
+
+EASTING=234765
+NORTHING=7518233
+EASTING1=237289
+NORTHING1=7514667
+
+# minimum motorway pz crossing altitude in feet
+
+MIN_ALT=2500
+
+# minimum proximity to motorway to be considered a crossing
+# TODO make sure there is a point on the other side of the line, i.e. the track did cross the motorway
+
+MIN_PROXIMITY=10
+
