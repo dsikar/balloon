@@ -38,7 +38,7 @@ with correct flight format.
 
 me@mydomain.com [~/balloon/scripts]# . main.sh
 
-10. Report will show up in the report sub-directory, in the format, MMDD(a|p).report e.g. 2507p.report, each line containing the
+10. Report will show up in the report sub-directory, in the format, DDMM(a|p).report e.g. 2507p.report, each line containing the
 pilot number, easting and northing of motorway crossing, altitude at that coordinate as well as a star if the altitude is below
 minimum altitude set in \config\config e.g.
 
