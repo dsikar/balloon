@@ -5,6 +5,8 @@ Scripts to check altitude crossing across a line defined by a pair of easting/no
 
 NB Due to scripts relying on *nix filepaths, the scripts do not work on windows systems.
 
+Update 09.12.2014 Code now available as standalone php scripts, will be uploading to github 
+sometime in near future.
 
 1. Unpack balloon.tgz
 
